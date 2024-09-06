@@ -18,11 +18,7 @@ function PopupList() {
 	}, [])
 	
 	const viewToggleHandler = () => {
-		if(view === 'list'){
-			setView('card')
-		} else {
-			setView('list')
-		}
+		setView(view === 'list' ? 'card': 'list')
 	}
 
 	console.log(list);
@@ -31,9 +27,9 @@ function PopupList() {
 		<span>
 			<ListHeaderContainer>
 			<h1>Pop-up List</h1>
-		    <ViewChangeSpanContainer>
+		    <ViewChangeSpanContainer isListView={view === 'list'}>
 		    	<ViewChangeSpan onClick={viewToggleHandler}>
-		    		<image src={''} />
+		    		
 		    	</ViewChangeSpan>
 		    </ViewChangeSpanContainer>
 			</ListHeaderContainer>

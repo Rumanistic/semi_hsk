@@ -15,7 +15,7 @@ export const ListHeaderContainer = styled.div`
 export const ViewChangeSpanContainer = styled.span`
 	float: right;
 	display: inline-flex;
-	justify-content: flex-start;
+	justify-content: ${({isListView}) =>	isListView ? 'flex-start' : 'flex-end'};
 	background-color: rgba(102, 102, 255, 0.2);
 	width: 85px;
 	height: 40px;
