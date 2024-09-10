@@ -72,7 +72,12 @@ public class Event {
 
 	@NonNull
 	@Column(name="TAGS")
-	private List<String> tags;
+	private String tags;
+	
+	// 240909 추가 - 이미지 이름 저장
+	@NonNull
+	@Column(name="IMAGES")
+	private String images;
 
 	@NonNull
 	@CreatedDate
